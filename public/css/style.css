@@ -1,0 +1,470 @@
+:root {
+    /* Modern Color Palette */
+    --primary-color: #a759d1;   /* Muted Teal */
+    --secondary-color: #F9AA33; /* Warm Yellow */
+    --accent-color: #3498DB;    /* Bright Blue */
+    --background-color: #F2F2F2; /* Light Gray */
+    --text-color: #333;         /* Dark Gray */
+    --light-text-color: #f8f8f8; /* Off-white for text on dark backgrounds */
+    --border-radius: 10px;      /* Rounded corners */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Wrapper --- */
+#wrapper {
+    /* display: grid;
+    grid-template-columns: 1fr; Single column layout for flexibility */
+    gap: 2rem; /* Spacing between sections */
+    /* max-width: 1200px; Limit maximum width for better readability on large screens */
+    margin: 0 auto; /* Center the content */
+    /* padding: 2rem; */
+}
+
+/* --- Navigation (Desktop) --- */
+
+
+#headContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#logo img {
+    width: 60px;
+    margin-right: 1rem;
+}
+
+#logo h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+#navbar {
+    /* No specific width needed */
+}
+
+#navMenu {
+    display: flex;
+    list-style: none;
+}
+
+.navLinks {
+    margin-left: 1.5rem; /* Spacing between links */
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease-in-out;
+}
+
+.navLinks a:hover,
+.navLinks a:focus,
+.navLinks a.active {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.navLinks a.loginNav,
+.navLinks input[type="submit"] { /* For consistency */
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.navLinks a.loginNav:hover,
+.navLinks input[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* --- Mobile Navigation --- */
+#headMobile {
+    display: none; /* Hidden by default, shown with media queries */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3.5rem; /* Adjust height as needed */
+}
+
+.nav-toggle,
+.nav-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 3.5rem; /* Height of the mobile nav bar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99; /* Ensure it's below the fixed nav bar */
+    overflow-y: auto; /* Allow scrolling if content is long */
+    max-height: calc(100vh - 3.5rem); /* Prevent menu from going off-screen */
+}
+
+.nav-menu.show-menu {
+    display: block; /* Shown when toggled */
+}
+
+.nav-list {
+    list-style: none;
+    padding: 1rem;
+}
+
+.nav-item {
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav-icon {
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    background-color: var(--background-color);
+}
+
+#logoMob {
+    display: none; /* You might not need the logo in the mobile menu */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem; /* Push footer down a bit */
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border-top: 1px solid #ccc;
+}
+
+/* --- Utility Classes --- */
+.isTherapist,
+.isPatient,
+.isLoggedIn,
+.isLoggedOut,
+.isAdmin,
+.hasActiveSession {
+    display: none;
+}
+
+/* --- Chat Box --- */
+#therapistChat {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 300px; /* Fixed width */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+#therapistChat.enter {
+    /* No transform needed, just display */
+    display: flex;
+    flex-direction: column;
+}
+
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Fixed height */
+}
+
+/* Chat Header */
+.chatContainer #chatHeader {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatProfile {
+    display: flex;
+    align-items: center;
+}
+
+#chatImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+#chatProfileDesc {
+    /* No specific styles needed */
+}
+
+#chatName {
+    font-weight: 600;
+}
+
+#chatHeader p {
+    font-size: 0.9rem;
+}
+
+#chatTools {
+    display: flex;
+    align-items: center;
+}
+
+#chatTools a {
+    margin-left: 1rem;
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
+#closeChat {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--light-text-color);
+    font-size: 1.2rem;
+}
+
+/* Chat Messages */
+.chatContainer #chatMessages {
+    flex-grow: 1; /* Allow messages to take up available space */
+    overflow-y: auto;
+    padding: 1rem;
+    list-style: none;
+}
+
+#sessionTimer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+#chatMessages li {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: var(--border-radius);
+    max-width: 70%;
+    word-wrap: break-word;
+    position: relative; /* For absolute positioning of time */
+}
+
+#chatMessages li.other {
+    background-color: #eee;
+    color: var(--text-color);
+    align-self: flex-start;
+}
+
+#chatMessages li.self {
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    align-self: flex-end;
+}
+
+/* Time display on messages */
+#chatMessages li.showTime::before {
+    content: attr(data-before);
+    position: absolute;
+    bottom: -1rem; /* Adjust as needed */
+    font-size: 0.7rem;
+    color: #777;
+}
+
+#chatMessages li.other.showTime::before {
+    left: 0;
+}
+
+#chatMessages li.self.showTime::before {
+    right: 0;
+}
+
+/* Send Message Container */
+.chatContainer #sendMessageContainer {
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+#chatbox {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* More rounded */
+    margin-right: 0.5rem;
+    resize: none;
+    font-size: 0.9rem;
+}
+
+#sendMessage {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#sendMessage img {
+    width: 20px; /* Adjust as needed */
+}
+
+/* --- Chat Expired Modal --- */
+#chatExpiredModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalContent {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    max-width: 400px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    position: relative;
+}
+
+#closeChatExpired {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#chatExpiredModalMessage h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+#chatExpiredModalMessage p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+#chatExpiredModalMessage p a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    /* Hide desktop navigation */
+    #navPlaceHolder {
+        display: none;
+    }
+
+    /* Show mobile navigation */
+    #headMobile {
+        display: block;
+    }
+
+    /* Adjust chat box for smaller screens */
+    #therapistChat {
+        width: 90%;
+        bottom: 4rem; /* Adjust position */
+    }
+    .chatContainer{
+        height: 350px;
+    }
+}

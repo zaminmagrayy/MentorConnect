@@ -123,7 +123,7 @@ Our Admin Dashboard provides administrators with comprehensive tools to manage a
 
 Our application features a mentor shopping cart system, allowing users to browse and "purchase" live chat sessions with mentors. Although a payment integration system is not yet implemented, mentees can simulate the process of adding mentors to their cart and checking out.
 
-* __Therapist Listings__: Any user can view a list of available mentors for live chat sessions.
+* __Mentor Listings__: Any user can view a list of available mentors for live chat sessions.
 * __Shopping Cart__: Registered mentees can add or remove mentors to their shopping cart and proceed to the Checkout page. The Checkout cart page also displays the total price including tax for the cart items.
 * __Invoice Generation__: Mentees can print an invoice PDF of their order from the Checkout page.
 * __Order Confirmation__: After confirming their cart and checking out, mentees are navigated to a Thank You page and receive an email confirmation. They can start a live chat session with the ordered mentor immediately.

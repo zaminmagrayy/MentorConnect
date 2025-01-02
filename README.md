@@ -28,34 +28,6 @@ MentorConnect is an innovative platform designed to bridge the gap between mento
 
 </details>
 
-<details>
-  <summary>Installation</summary>
-
-### Installation
-
-1. Install the latest npm package version.
-
-  ```sh
-  npm install npm@latest -g
-  ```
-
-2. Clone the repository to your local machine.
-
-  ```sh
-  git clone https://github.com/towaquimbayo/MentorConnect.git
-  ```
-
-3. Installing required dependencies requires Node and npm.
-
-  ```sh
-  npm install
-  ```
-
-</details>
-
-<details>
-  <summary>Environment Variables Setup</summary>
-
 ### Environment Variables Setup
 
 For the project to run correctly, environment variables are required. Rename the `.env.example` to `.env`.

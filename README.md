@@ -5,7 +5,7 @@ MentorConnect is an innovative platform designed to bridge the gap between mento
 
 ## IMAGES
 ![image alt](https://github.com/zaminmagrayy/MentorConnect/blob/dfb70636bd2b5279aaab57db140f40651aec7f2f/PHOTO-2025-01-20-16-25-43.jpg)
-![image alt]()
+![image alt](https://github.com/zaminmagrayy/MentorConnect/blob/2c55bed0edbefdab3bbf072ddcb544816bc593d1/PHOTO-2025-01-01-19-11-44%203.jpg)
 ![image alt]()
 ![image alt]()
 

@@ -2,6 +2,10 @@
 
 MentorConnect is an innovative platform designed to bridge the gap between mentors and mentees, providing a streamlined, user-friendly experience to facilitate professional growth, skill development, and personal mentoring. The app enables users to easily connect with industry experts, gain valuable insights, and receive guidance tailored to their specific career goals. With features like profile matching, session scheduling, and live mentoring sessions, MentorConnect empowers users to achieve their full potential by making mentorship accessible, effective, and personalized.
 
+
+## IMAGES
+![image alt](https://github.com/zaminmagrayy/MentorConnect/blob/dfb70636bd2b5279aaab57db140f40651aec7f2f/PHOTO-2025-01-20-16-25-43.jpg)
+
 ## Technologies
 
 * HTML5
@@ -33,8 +37,7 @@ MentorConnect is an innovative platform designed to bridge the gap between mento
 <details>
   <summary>Run The App</summary>
 
-## IMAGES
-![image alt](https://github.com/zaminmagrayy/MentorConnect/blob/dfb70636bd2b5279aaab57db140f40651aec7f2f/PHOTO-2025-01-20-16-25-43.jpg)
+
 
 
 ### Run The App

@@ -18,8 +18,6 @@ MentorConnect is an innovative platform designed to bridge the gap between mento
 * Nodemon `v2.0.16`
 * Socket.IO `v4.5.1`
 
-##pictures
-![image alt](https://github.com/zaminmagrayy/MentorConnect/blob/dfb70636bd2b5279aaab57db140f40651aec7f2f/PHOTO-2025-01-20-16-25-43.jpg)
 
 
 ### Prerequisites
@@ -34,6 +32,10 @@ MentorConnect is an innovative platform designed to bridge the gap between mento
 
 <details>
   <summary>Run The App</summary>
+
+## IMAGES
+![image alt](https://github.com/zaminmagrayy/MentorConnect/blob/dfb70636bd2b5279aaab57db140f40651aec7f2f/PHOTO-2025-01-20-16-25-43.jpg)
+
 
 ### Run The App
 
